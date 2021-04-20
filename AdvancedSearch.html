@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Web Page!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            }
+        .grid-container{
+            display:grid;
+            grid-template-columns: 210px minmax(230px, 50%) 1fr;
+            grid-template-rows: 60px 75px 75px repeat(5,40px);
+            grid-template-areas: 
+                'head head head'
+                'title title title'
+                'cathead cathead exhead'
+                'cat srch exampl'
+                'cat srch exampl'
+                'cat srch exampl'
+                'cat srch exampl'
+                'cat go exampl';
+            color:rgb(46, 46, 46)
+        }
+        .header{
+            grid-area: head;
+            padding: 15px;
+            background-color: rgb(233, 233, 233)
+        }
+        .title1{
+            grid-area: title;
+            padding-top:20px;
+            padding-left:42px;
+            font-size: 21px;
+            font-weight:600;
+            color:rgb(214, 50, 0);
+            border-bottom: solid lightgray;
+            border-width: 1px;
+            background-color: white;
+        }
+        .categoryhead{
+            grid-area: cathead;
+            padding-left: 42px;
+            padding-top:40px;
+            font-size: 17px;
+        }
+        .category{
+            grid-area: cat;
+            padding-left: 42px;
+            padding-top:10px;
+            font-size:14px;
+        }
+        .category > div{
+            height: 42px;
+        }
+        .search{
+            grid-area: srch;
+        }
+        input[type=text] {
+            border-color:lightgrey;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 1px;
+            width: 96%;
+            padding-left: 10px;
+            height:29px;
+            margin-top: 7px;
+        }
+        .exampleshead{
+            grid-area: exhead;
+            padding-top:40px;
+            padding-left: 2px;
+            font-size: 16px;
+        }
+        .examples{
+            grid-area: exampl;
+            padding-top:10px;
+            padding-left:10px;
+            font-size: 13px;
+        }
+        .examples > div{
+            height: 42px;
+        }
+        .submit{
+            grid-area: go;
+            justify-self: end;
+        }    
+
+        input[type=submit] {
+            margin-top: 26px;
+            padding:5px;
+            width: 122px;
+            height: 30px;
+            border-radius:2px;
+            border-width: 1px;
+            border-color: royalblue;
+            font-size: 13px;
+            background-color:rgb(49, 128, 218);
+            color:white;
+        }
+        @media screen and (max-width: 960px) {
+                .side{
+                    display:none;
+                }
+            }
+    </style>
+    
+</head>
+<body>
+<form action="https://google.com/search">    
+    <div class = 'grid-container'>
+        <div class = 'header'>
+            <img src="logo2.png" alt="Google" width="95px" >
+        </div>
+        <div class = 'title1'>Advanced Search</div>
+        <div class = 'categoryhead'>Find pages with...</div>
+        <div class = 'category'>
+            <div>all these words:<br/></div>
+            <div>this exact word or phrase:<br/></div>
+            <div>any of these words:<br/></div>
+            <div>none of these words:<br/></div>
+        </div>
+        <div class = 'search'>
+            
+                <div><input type="text" name="as_q"><br/></div>
+                <div><input type="text" name="as_epq"><br/></div>
+                <div><input type="text" name="as_oq"><br/></div>
+                <div><input type="text" name="as_eq"><br/></div>
+
+        </div>
+        <div class = 'exampleshead side'> To do this in the search box</div>
+        <div class = 'examples side'>
+            <div>Type the important words:  tricolor rat terrier<br/></div>
+            <div>Put exact words in quotes:  "rat terrier"<br/></div>
+            <div>Type OR between all the words you want:  miniature OR standard<br/></div>
+            <div>Put a minus sign just before words you don't want:<br/>
+                -rodent, -"Jack Russell"<br/></div>
+        </div>
+        <div class = 'submit'>
+            <input type="submit" value="Advanced Search">
+        </div>
+
+    </div>
+</form>
+</body>
+</html>
