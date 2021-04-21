@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My Web Page!</title>
+    <title>Advanced Search</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
@@ -14,7 +14,7 @@
             grid-template-columns: 210px minmax(230px, 50%) 1fr;
             grid-template-rows: 60px 75px 75px repeat(5,40px);
             grid-template-areas: 
-                'head head head'
+                'head head link'
                 'title title title'
                 'cathead cathead exhead'
                 'cat srch exampl'
@@ -27,7 +27,13 @@
         .header{
             grid-area: head;
             padding: 15px;
-            background-color: rgb(233, 233, 233)
+            background-color: rgb(233, 233, 233);
+        }
+        .link{
+            grid-area:link;
+            text-align: right;
+            padding: 20px;
+            background-color: rgb(233, 233, 233);
         }
         .title1{
             grid-area: title;
@@ -113,6 +119,9 @@
     <div class = 'grid-container'>
         <div class = 'header'>
             <img src="logo2.png" alt="Google" width="95px" >
+        </div>
+        <div class = 'link'>
+            <a href="Google Search.html">Google Search</a></br>
         </div>
         <div class = 'title1'>Advanced Search</div>
         <div class = 'categoryhead'>Find pages with...</div>
